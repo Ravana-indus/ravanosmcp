@@ -1,0 +1,62 @@
+# Node modules (will be installed in container)
+node_modules/
+
+# Build output (will be built in container)
+dist/
+
+# Environment files (exclude local dev, allow examples and production)
+.env
+.env.local
+.env.test
+!.env.example
+!.env.production.example
+!.env.production
+
+# Development files
+test/
+tests/
+coverage/
+*.test.ts
+*.spec.ts
+
+# Documentation
+docs/
+README.md
+*.md
+
+# Git files
+.git/
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional dependencies
+.nyc_output
+.coverage
+
+# Docker files
+Dockerfile*
+docker-compose*.yml
+
+# Development configurations
+.eslintrc.*
+.prettierrc
+jest.config.js
