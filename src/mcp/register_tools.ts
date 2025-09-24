@@ -17,7 +17,7 @@ import { logger, redactSensitiveData } from '../observability/logger';
 
 // Tool schemas
 const connectToolSchema = {
-  name: 'erp.auth.connect',
+  name: 'erp_auth_connect',
   description: 'Establish authenticated connection to ERPNext using API key and secret',
   inputSchema: {
     type: 'object',
@@ -40,7 +40,7 @@ const connectToolSchema = {
 };
 
 const whoamiToolSchema = {
-  name: 'erp.auth.whoami',
+  name: 'erp_auth_whoami',
   description: 'Get current authenticated user information and roles',
   inputSchema: {
     type: 'object',
@@ -50,7 +50,7 @@ const whoamiToolSchema = {
 };
 
 const createDocToolSchema = {
-  name: 'erp.doc.create',
+  name: 'erp_doc_create',
   description: 'Create a new document in ERPNext',
   inputSchema: {
     type: 'object',
@@ -70,7 +70,7 @@ const createDocToolSchema = {
 };
 
 const getDocToolSchema = {
-  name: 'erp.doc.get',
+  name: 'erp_doc_get',
   description: 'Get a document from ERPNext by doctype and name',
   inputSchema: {
     type: 'object',
@@ -96,7 +96,7 @@ const getDocToolSchema = {
 };
 
 const listDocToolSchema = {
-  name: 'erp.doc.list',
+  name: 'erp_doc_list',
   description: 'List documents from ERPNext with optional filters and pagination',
   inputSchema: {
     type: 'object',
@@ -128,7 +128,7 @@ const listDocToolSchema = {
 };
 
 const updateDocToolSchema = {
-  name: 'erp.doc.update',
+  name: 'erp_doc_update',
   description: 'Update an existing document in ERPNext with partial field changes',
   inputSchema: {
     type: 'object',
@@ -152,7 +152,7 @@ const updateDocToolSchema = {
 };
 
 const deleteDocToolSchema = {
-  name: 'erp.doc.delete',
+  name: 'erp_doc_delete',
   description: 'Delete a document from ERPNext',
   inputSchema: {
     type: 'object',
@@ -171,7 +171,7 @@ const deleteDocToolSchema = {
 };
 
 const submitDocToolSchema = {
-  name: 'erp.doc.submit',
+  name: 'erp_doc_submit',
   description: 'Submit a document in ERPNext to move it to the next workflow state',
   inputSchema: {
     type: 'object',
@@ -190,7 +190,7 @@ const submitDocToolSchema = {
 };
 
 const cancelDocToolSchema = {
-  name: 'erp.doc.cancel',
+  name: 'erp_doc_cancel',
   description: 'Cancel a document in ERPNext to invalidate incorrect records',
   inputSchema: {
     type: 'object',
@@ -209,7 +209,7 @@ const cancelDocToolSchema = {
 };
 
 const workflowActionToolSchema = {
-  name: 'erp.workflow.action',
+  name: 'erp_workflow_action',
   description: 'Execute a workflow action on a document in ERPNext to progress approvals',
   inputSchema: {
     type: 'object',
@@ -232,7 +232,7 @@ const workflowActionToolSchema = {
 };
 
 const replaceTableToolSchema = {
-  name: 'erp.child.replace_table',
+  name: 'erp_child_replace_table',
   description: 'Replace child table rows in a parent document in ERPNext',
   inputSchema: {
     type: 'object',
@@ -263,7 +263,7 @@ const replaceTableToolSchema = {
 };
 
 const autocompleteToolSchema = {
-  name: 'erp.link.autocomplete',
+  name: 'erp_link_autocomplete',
   description: 'Search and autocomplete link field options in ERPNext',
   inputSchema: {
     type: 'object',
@@ -287,7 +287,7 @@ const autocompleteToolSchema = {
 };
 
 const runReportToolSchema = {
-  name: 'erp.report.run',
+  name: 'erp_report_run',
   description: 'Execute ERPNext reports to fetch analytics data',
   inputSchema: {
     type: 'object',
@@ -307,7 +307,7 @@ const runReportToolSchema = {
 };
 
 const getPdfToolSchema = {
-  name: 'erp.print.get_pdf',
+  name: 'erp_print_get_pdf',
   description: 'Generate PDF documents from ERPNext records for sharing',
   inputSchema: {
     type: 'object',
@@ -330,7 +330,7 @@ const getPdfToolSchema = {
 };
 
 const uploadFileToolSchema = {
-  name: 'erp.file.upload',
+  name: 'erp_file_upload',
   description: 'Upload files to ERPNext documents to enrich records',
   inputSchema: {
     type: 'object',
@@ -357,7 +357,7 @@ const uploadFileToolSchema = {
 };
 
 const addCommentToolSchema = {
-  name: 'erp.comment.add',
+  name: 'erp_comment_add',
   description: 'Add comments to ERPNext documents for collaboration',
   inputSchema: {
     type: 'object',
@@ -380,7 +380,7 @@ const addCommentToolSchema = {
 };
 
 const checkPermissionToolSchema = {
-  name: 'erp.permissions.check',
+  name: 'erp_permissions_check',
   description: 'Check RBAC permissions for ERPNext operations to ensure authorized access',
   inputSchema: {
     type: 'object',
@@ -403,7 +403,7 @@ const checkPermissionToolSchema = {
 };
 
 const previewTransactionToolSchema = {
-  name: 'erp.txn.preview',
+  name: 'erp_txn_preview',
   description: 'Preview and validate ERPNext transactions before execution to prevent errors',
   inputSchema: {
     type: 'object',
@@ -423,7 +423,7 @@ const previewTransactionToolSchema = {
 };
 
 const runBulkToolSchema = {
-  name: 'erp.bulk.run',
+  name: 'erp_bulk_run',
   description: 'Execute bulk operations with automatic rollback on failure for safe batch processing',
   inputSchema: {
     type: 'object',
@@ -469,7 +469,7 @@ const runBulkToolSchema = {
 
 // HR Pack Tool Schemas
 const hrCheckInToolSchema = {
-  name: 'hr.check_in',
+  name: 'hr_check_in',
   description: 'Record employee check-in with optional location tracking',
   inputSchema: {
     type: 'object',
@@ -488,7 +488,7 @@ const hrCheckInToolSchema = {
 };
 
 const hrCheckOutToolSchema = {
-  name: 'hr.check_out',
+  name: 'hr_check_out',
   description: 'Record employee check-out with optional reason',
   inputSchema: {
     type: 'object',
@@ -507,7 +507,7 @@ const hrCheckOutToolSchema = {
 };
 
 const hrGetLeaveBalanceToolSchema = {
-  name: 'hr.get_leave_balance',
+  name: 'hr_get_leave_balance',
   description: 'Get leave balance for current employee with optional leave type filtering',
   inputSchema: {
     type: 'object',
@@ -522,7 +522,7 @@ const hrGetLeaveBalanceToolSchema = {
 };
 
 const hrApplyLeaveToolSchema = {
-  name: 'hr.apply_leave',
+  name: 'hr_apply_leave',
   description: 'Apply for leave with validation of dates and leave type',
   inputSchema: {
     type: 'object',
@@ -549,7 +549,7 @@ const hrApplyLeaveToolSchema = {
 };
 
 const hrGetPendingApprovalsToolSchema = {
-  name: 'hr.get_pending_approvals',
+  name: 'hr_get_pending_approvals',
   description: 'Get list of documents pending approval that current user can approve',
   inputSchema: {
     type: 'object',
@@ -559,7 +559,7 @@ const hrGetPendingApprovalsToolSchema = {
 };
 
 const hrApproveDocumentToolSchema = {
-  name: 'hr.approve_document',
+  name: 'hr_approve_document',
   description: 'Approve a document with RBAC enforcement',
   inputSchema: {
     type: 'object',
@@ -583,7 +583,7 @@ const hrApproveDocumentToolSchema = {
 };
 
 const salesCreateLeadToolSchema = {
-  name: 'sales.create_lead',
+  name: 'sales_create_lead',
   description: 'Create a new lead with contact validation',
   inputSchema: {
     type: 'object',
@@ -618,7 +618,7 @@ const salesCreateLeadToolSchema = {
 };
 
 const salesConvertLeadToCustomerToolSchema = {
-  name: 'sales.convert_lead_to_customer',
+  name: 'sales_convert_lead_to_customer',
   description: 'Convert a lead to customer with data mapping',
   inputSchema: {
     type: 'object',
@@ -649,7 +649,7 @@ const salesConvertLeadToCustomerToolSchema = {
 };
 
 const salesCreateQuotationToolSchema = {
-  name: 'sales.create_quotation',
+  name: 'sales_create_quotation',
   description: 'Create a quotation with item validation',
   inputSchema: {
     type: 'object',
@@ -695,7 +695,7 @@ const salesCreateQuotationToolSchema = {
 };
 
 const salesCreateSalesOrderToolSchema = {
-  name: 'sales.create_sales_order',
+  name: 'sales_create_sales_order',
   description: 'Create a sales order with delivery tracking',
   inputSchema: {
     type: 'object',
@@ -736,7 +736,7 @@ const salesCreateSalesOrderToolSchema = {
 };
 
 const salesGetSalesPipelineToolSchema = {
-  name: 'sales.get_sales_pipeline',
+  name: 'sales_get_sales_pipeline',
   description: 'Get sales pipeline with status grouping',
   inputSchema: {
     type: 'object',
@@ -746,7 +746,7 @@ const salesGetSalesPipelineToolSchema = {
 };
 
 const purchaseCreatePurchaseRequestToolSchema = {
-  name: 'purchase.create_purchase_request',
+  name: 'purchase_create_purchase_request',
   description: 'Create a purchase request with priority handling',
   inputSchema: {
     type: 'object',
@@ -795,7 +795,7 @@ const purchaseCreatePurchaseRequestToolSchema = {
 };
 
 const purchaseCreatePurchaseOrderToolSchema = {
-  name: 'purchase.create_purchase_order',
+  name: 'purchase_create_purchase_order',
   description: 'Create a purchase order with supplier validation',
   inputSchema: {
     type: 'object',
@@ -848,7 +848,7 @@ const purchaseCreatePurchaseOrderToolSchema = {
 };
 
 const purchaseReceivePurchaseOrderToolSchema = {
-  name: 'purchase.receive_purchase_order',
+  name: 'purchase_receive_purchase_order',
   description: 'Receive a purchase order with quantity validation',
   inputSchema: {
     type: 'object',
@@ -889,7 +889,7 @@ const purchaseReceivePurchaseOrderToolSchema = {
 };
 
 const inventoryGetStockLevelsToolSchema = {
-  name: 'inventory.get_stock_levels',
+  name: 'inventory_get_stock_levels',
   description: 'Get stock levels with warehouse filtering',
   inputSchema: {
     type: 'object',
@@ -908,7 +908,7 @@ const inventoryGetStockLevelsToolSchema = {
 };
 
 const inventoryGetLowStockItemsToolSchema = {
-  name: 'inventory.get_low_stock_items',
+  name: 'inventory_get_low_stock_items',
   description: 'Get low stock items with reorder threshold checking',
   inputSchema: {
     type: 'object',
@@ -927,7 +927,7 @@ const inventoryGetLowStockItemsToolSchema = {
 };
 
 const financeCreateSalesInvoiceToolSchema = {
-  name: 'finance.create_sales_invoice',
+  name: 'finance_create_sales_invoice',
   description: 'Create a sales invoice with tax calculation',
   inputSchema: {
     type: 'object',
@@ -972,7 +972,7 @@ const financeCreateSalesInvoiceToolSchema = {
 };
 
 const financeRecordPaymentToolSchema = {
-  name: 'finance.record_payment',
+  name: 'finance_record_payment',
   description: 'Record a payment with invoice matching',
   inputSchema: {
     type: 'object',
@@ -1027,7 +1027,7 @@ const financeRecordPaymentToolSchema = {
 };
 
 const financeGetOutstandingInvoicesToolSchema = {
-  name: 'finance.get_outstanding_invoices',
+  name: 'finance_get_outstanding_invoices',
   description: 'Get outstanding invoices with customer filtering',
   inputSchema: {
     type: 'object',
@@ -1046,7 +1046,7 @@ const financeGetOutstandingInvoicesToolSchema = {
 };
 
 const financeCreateExpenseClaimToolSchema = {
-  name: 'finance.create_expense_claim',
+  name: 'finance_create_expense_claim',
   description: 'Create an expense claim with validation',
   inputSchema: {
     type: 'object',
@@ -1096,14 +1096,14 @@ export async function registerAllTools(server: Server): Promise<void> {
     const { name, arguments: args } = request.params;
 
     try {
-      if (name === 'erp.auth.connect') {
+      if (name === 'erp_auth_connect') {
         const { baseUrl, apiKey, apiSecret } = args as {
           baseUrl: string;
           apiKey: string;
           apiSecret: string;
         };
 
-        logger.info('Processing auth.connect request', redactSensitiveData({
+        logger.info('Processing auth_connect request', redactSensitiveData({
           baseUrl,
           apiKey,
           apiSecret
@@ -1117,7 +1117,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.auth.connect',
+                tool: 'erp_auth_connect',
                 ok: result.ok,
                 data: result.ok ? { connected: true } : undefined,
                 error: result.error,
@@ -1131,8 +1131,8 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.auth.whoami') {
-        logger.info('Processing auth.whoami request');
+      } else if (name === 'erp_auth_whoami') {
+        logger.info('Processing auth_whoami request');
 
         const result: AuthResponse = await erpAuthenticator.whoami();
 
@@ -1142,7 +1142,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.auth.whoami',
+                tool: 'erp_auth_whoami',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1156,13 +1156,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.create') {
+      } else if (name === 'erp_doc_create') {
         const { doctype, doc } = args as {
           doctype: string;
           doc: Record<string, any>;
         };
 
-        logger.info('Processing doc.create request', redactSensitiveData({
+        logger.info('Processing doc_create request', redactSensitiveData({
           doctype,
           docFields: Object.keys(doc)
         }));
@@ -1175,7 +1175,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.create',
+                tool: 'erp_doc_create',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1189,14 +1189,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.get') {
+      } else if (name === 'erp_doc_get') {
         const { doctype, name: docName, fields } = args as {
           doctype: string;
           name: string;
           fields?: string[];
         };
 
-        logger.info('Processing doc.get request', redactSensitiveData({
+        logger.info('Processing doc_get request', redactSensitiveData({
           doctype,
           name: docName,
           fields: fields || 'all'
@@ -1210,7 +1210,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.get',
+                tool: 'erp_doc_get',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1224,7 +1224,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.list') {
+      } else if (name === 'erp_doc_list') {
         const { doctype, filters, fields, limit } = args as {
           doctype: string;
           filters?: Record<string, any>;
@@ -1232,7 +1232,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           limit?: number;
         };
 
-        logger.info('Processing doc.list request', redactSensitiveData({
+        logger.info('Processing doc_list request', redactSensitiveData({
           doctype,
           filters: filters || 'none',
           fields: fields || 'all',
@@ -1247,7 +1247,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.list',
+                tool: 'erp_doc_list',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1261,14 +1261,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.update') {
+      } else if (name === 'erp_doc_update') {
         const { doctype, name: docName, patch } = args as {
           doctype: string;
           name: string;
           patch: Record<string, any>;
         };
 
-        logger.info('Processing doc.update request', redactSensitiveData({
+        logger.info('Processing doc_update request', redactSensitiveData({
           doctype,
           name: docName,
           patchFields: Object.keys(patch)
@@ -1282,7 +1282,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.update',
+                tool: 'erp_doc_update',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1296,13 +1296,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.delete') {
+      } else if (name === 'erp_doc_delete') {
         const { doctype, name: docName } = args as {
           doctype: string;
           name: string;
         };
 
-        logger.info('Processing doc.delete request', redactSensitiveData({
+        logger.info('Processing doc_delete request', redactSensitiveData({
           doctype,
           name: docName
         }));
@@ -1315,7 +1315,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.delete',
+                tool: 'erp_doc_delete',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1329,13 +1329,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.submit') {
+      } else if (name === 'erp_doc_submit') {
         const { doctype, name: docName } = args as {
           doctype: string;
           name: string;
         };
 
-        logger.info('Processing doc.submit request', redactSensitiveData({
+        logger.info('Processing doc_submit request', redactSensitiveData({
           doctype,
           name: docName
         }));
@@ -1348,7 +1348,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.submit',
+                tool: 'erp_doc_submit',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1362,13 +1362,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.doc.cancel') {
+      } else if (name === 'erp_doc_cancel') {
         const { doctype, name: docName } = args as {
           doctype: string;
           name: string;
         };
 
-        logger.info('Processing doc.cancel request', redactSensitiveData({
+        logger.info('Processing doc_cancel request', redactSensitiveData({
           doctype,
           name: docName
         }));
@@ -1381,7 +1381,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.doc.cancel',
+                tool: 'erp_doc_cancel',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1395,14 +1395,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.workflow.action') {
+      } else if (name === 'erp_workflow_action') {
         const { doctype, name: docName, action } = args as {
           doctype: string;
           name: string;
           action: string;
         };
 
-        logger.info('Processing workflow.action request', redactSensitiveData({
+        logger.info('Processing workflow_action request', redactSensitiveData({
           doctype,
           name: docName,
           action
@@ -1416,7 +1416,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.workflow.action',
+                tool: 'erp_workflow_action',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1430,7 +1430,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.child.replace_table') {
+      } else if (name === 'erp_child_replace_table') {
         const { parent_doctype, parent_name, tablefield, rows } = args as {
           parent_doctype: string;
           parent_name: string;
@@ -1438,7 +1438,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           rows: Record<string, any>[];
         };
 
-        logger.info('Processing child.replace_table request', redactSensitiveData({
+        logger.info('Processing child_replace_table request', redactSensitiveData({
           parent_doctype,
           parent_name,
           tablefield,
@@ -1453,7 +1453,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.child.replace_table',
+                tool: 'erp_child_replace_table',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1467,14 +1467,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.link.autocomplete') {
+      } else if (name === 'erp_link_autocomplete') {
         const { doctype, txt, limit } = args as {
           doctype: string;
           txt: string;
           limit?: number;
         };
 
-        logger.info('Processing link.autocomplete request', redactSensitiveData({
+        logger.info('Processing link_autocomplete request', redactSensitiveData({
           doctype,
           txt: txt.substring(0, 20),
           limit: limit || 'no limit'
@@ -1488,7 +1488,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.link.autocomplete',
+                tool: 'erp_link_autocomplete',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1502,13 +1502,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.report.run') {
+      } else if (name === 'erp_report_run') {
         const { report_name, filters } = args as {
           report_name: string;
           filters?: Record<string, any>;
         };
 
-        logger.info('Processing report.run request', redactSensitiveData({
+        logger.info('Processing report_run request', redactSensitiveData({
           report_name,
           filters: filters ? Object.keys(filters) : 'none'
         }));
@@ -1521,7 +1521,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.report.run',
+                tool: 'erp_report_run',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1535,14 +1535,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.print.get_pdf') {
+      } else if (name === 'erp_print_get_pdf') {
         const { doctype, name: docName, print_format } = args as {
           doctype: string;
           name: string;
           print_format?: string;
         };
 
-        logger.info('Processing print.get_pdf request', redactSensitiveData({
+        logger.info('Processing print_get_pdf request', redactSensitiveData({
           doctype,
           name: docName,
           print_format: print_format || 'default'
@@ -1556,7 +1556,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.print.get_pdf',
+                tool: 'erp_print_get_pdf',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1570,7 +1570,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.file.upload') {
+      } else if (name === 'erp_file_upload') {
         const { doctype, name: docName, file_base64, filename } = args as {
           doctype: string;
           name: string;
@@ -1578,7 +1578,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           filename: string;
         };
 
-        logger.info('Processing file.upload request', redactSensitiveData({
+        logger.info('Processing file_upload request', redactSensitiveData({
           doctype,
           name: docName,
           filename,
@@ -1593,7 +1593,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.file.upload',
+                tool: 'erp_file_upload',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1607,14 +1607,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.comment.add') {
+      } else if (name === 'erp_comment_add') {
         const { doctype, name: docName, comment } = args as {
           doctype: string;
           name: string;
           comment: string;
         };
 
-        logger.info('Processing comment.add request', redactSensitiveData({
+        logger.info('Processing comment_add request', redactSensitiveData({
           doctype,
           name: docName,
           comment_length: comment.length
@@ -1628,7 +1628,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.comment.add',
+                tool: 'erp_comment_add',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1642,14 +1642,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.permissions.check') {
+      } else if (name === 'erp_permissions_check') {
         const { doctype, action, name: docName } = args as {
           doctype: string;
           action: string;
           name?: string;
         };
 
-        logger.info('Processing permissions.check request', redactSensitiveData({
+        logger.info('Processing permissions_check request', redactSensitiveData({
           doctype,
           action,
           name: docName || 'none'
@@ -1663,7 +1663,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.permissions.check',
+                tool: 'erp_permissions_check',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1677,13 +1677,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.txn.preview') {
+      } else if (name === 'erp_txn_preview') {
         const { doctype, doc } = args as {
           doctype: string;
           doc: Record<string, any>;
         };
 
-        logger.info('Processing txn.preview request', redactSensitiveData({
+        logger.info('Processing txn_preview request', redactSensitiveData({
           doctype,
           doc_fields: Object.keys(doc)
         }));
@@ -1696,7 +1696,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.txn.preview',
+                tool: 'erp_txn_preview',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1710,7 +1710,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'erp.bulk.run') {
+      } else if (name === 'erp_bulk_run') {
         const { operations, rollback_on_error } = args as {
           operations: Array<{
             type: string;
@@ -1722,7 +1722,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           rollback_on_error?: boolean;
         };
 
-        logger.info('Processing bulk.run request', redactSensitiveData({
+        logger.info('Processing bulk_run request', redactSensitiveData({
           operations_count: operations.length,
           rollback_on_error: rollback_on_error ?? true,
           operation_types: operations.map(op => op.type)
@@ -1736,7 +1736,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'erp.bulk.run',
+                tool: 'erp_bulk_run',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1750,13 +1750,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.check_in') {
+      } else if (name === 'hr_check_in') {
         const { location, device_id } = args as {
           location?: string;
           device_id?: string;
         };
 
-        logger.info('Processing hr.check_in request', redactSensitiveData({
+        logger.info('Processing hr_check_in request', redactSensitiveData({
           location: location || 'not_provided'
         }));
 
@@ -1768,7 +1768,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.check_in',
+                tool: 'hr_check_in',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1782,13 +1782,13 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.check_out') {
+      } else if (name === 'hr_check_out') {
         const { reason, device_id } = args as {
           reason?: string;
           device_id?: string;
         };
 
-        logger.info('Processing hr.check_out request', redactSensitiveData({
+        logger.info('Processing hr_check_out request', redactSensitiveData({
           reason: reason || 'not_provided'
         }));
 
@@ -1800,7 +1800,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.check_out',
+                tool: 'hr_check_out',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1814,12 +1814,12 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.get_leave_balance') {
+      } else if (name === 'hr_get_leave_balance') {
         const { leave_type } = args as {
           leave_type?: string;
         };
 
-        logger.info('Processing hr.get_leave_balance request', redactSensitiveData({
+        logger.info('Processing hr_get_leave_balance request', redactSensitiveData({
           leave_type: leave_type || 'all'
         }));
 
@@ -1831,7 +1831,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.get_leave_balance',
+                tool: 'hr_get_leave_balance',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1845,7 +1845,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.apply_leave') {
+      } else if (name === 'hr_apply_leave') {
         const { leave_type, from_date, to_date, reason } = args as {
           leave_type: string;
           from_date: string;
@@ -1853,7 +1853,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           reason?: string;
         };
 
-        logger.info('Processing hr.apply_leave request', redactSensitiveData({
+        logger.info('Processing hr_apply_leave request', redactSensitiveData({
           leave_type,
           from_date,
           to_date,
@@ -1868,7 +1868,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.apply_leave',
+                tool: 'hr_apply_leave',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1882,8 +1882,8 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.get_pending_approvals') {
-        logger.info('Processing hr.get_pending_approvals request');
+      } else if (name === 'hr_get_pending_approvals') {
+        logger.info('Processing hr_get_pending_approvals request');
 
         const result: GetPendingApprovalsResponse = await getPendingApprovals();
 
@@ -1893,7 +1893,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.get_pending_approvals',
+                tool: 'hr_get_pending_approvals',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1907,14 +1907,14 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'hr.approve_document') {
+      } else if (name === 'hr_approve_document') {
         const { doctype, name: docName, action } = args as {
           doctype: string;
           name: string;
           action?: string;
         };
 
-        logger.info('Processing hr.approve_document request', redactSensitiveData({
+        logger.info('Processing hr_approve_document request', redactSensitiveData({
           doctype,
           name: docName,
           action: action || 'Approve'
@@ -1928,7 +1928,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'hr.approve_document',
+                tool: 'hr_approve_document',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1942,7 +1942,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'sales.create_lead') {
+      } else if (name === 'sales_create_lead') {
         const { lead_name, email_id, phone, company_name, source, status } = args as {
           lead_name: string;
           email_id: string;
@@ -1952,7 +1952,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           status?: string;
         };
 
-        logger.info('Processing sales.create_lead request', redactSensitiveData({
+        logger.info('Processing sales_create_lead request', redactSensitiveData({
           lead_name,
           email_id,
           phone,
@@ -1967,7 +1967,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'sales.create_lead',
+                tool: 'sales_create_lead',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -1981,7 +1981,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'sales.convert_lead_to_customer') {
+      } else if (name === 'sales_convert_lead_to_customer') {
         const { lead_name, customer_name, customer_type, customer_group, territory } = args as {
           lead_name: string;
           customer_name?: string;
@@ -1990,7 +1990,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           territory?: string;
         };
 
-        logger.info('Processing sales.convert_lead_to_customer request', {
+        logger.info('Processing sales_convert_lead_to_customer request', {
           lead_name,
           customer_name: customer_name || 'not_provided'
         });
@@ -2003,7 +2003,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'sales.convert_lead_to_customer',
+                tool: 'sales_convert_lead_to_customer',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2017,7 +2017,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'sales.create_quotation') {
+      } else if (name === 'sales_create_quotation') {
         const { quotation_to, party_name, items, valid_till } = args as {
           quotation_to: 'Customer' | 'Lead';
           party_name: string;
@@ -2025,7 +2025,7 @@ export async function registerAllTools(server: Server): Promise<void> {
           valid_till?: string;
         };
 
-        logger.info('Processing sales.create_quotation request', {
+        logger.info('Processing sales_create_quotation request', {
           quotation_to,
           party_name,
           items_count: items?.length || 0
@@ -2039,7 +2039,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'sales.create_quotation',
+                tool: 'sales_create_quotation',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2053,7 +2053,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'sales.create_sales_order') {
+      } else if (name === 'sales_create_sales_order') {
         const { customer, delivery_date, items } = args as {
           customer: string;
           delivery_date: string;
@@ -2074,7 +2074,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'sales.create_sales_order',
+                tool: 'sales_create_sales_order',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2088,7 +2088,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'sales.get_sales_pipeline') {
+      } else if (name === 'sales_get_sales_pipeline') {
         logger.info('Processing sales.get_sales_pipeline request');
 
         const result: GetSalesPipelineResponse = await getSalesPipeline();
@@ -2099,7 +2099,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'sales.get_sales_pipeline',
+                tool: 'sales_get_sales_pipeline',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2113,7 +2113,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'purchase.create_purchase_request') {
+      } else if (name === 'purchase_create_purchase_request') {
         const { company, transaction_date, items, priority, required_by } = args as {
           company: string;
           transaction_date: string;
@@ -2136,7 +2136,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'purchase.create_purchase_request',
+                tool: 'purchase_create_purchase_request',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2150,7 +2150,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'purchase.create_purchase_order') {
+      } else if (name === 'purchase_create_purchase_order') {
         const { supplier, company, transaction_date, items, delivery_date, terms } = args as {
           supplier: string;
           company: string;
@@ -2175,7 +2175,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'purchase.create_purchase_order',
+                tool: 'purchase_create_purchase_order',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2189,7 +2189,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'purchase.receive_purchase_order') {
+      } else if (name === 'purchase_receive_purchase_order') {
         const { supplier, purchase_order, items } = args as {
           supplier: string;
           purchase_order: string;
@@ -2210,7 +2210,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'purchase.receive_purchase_order',
+                tool: 'purchase_receive_purchase_order',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2224,7 +2224,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'inventory.get_stock_levels') {
+      } else if (name === 'inventory_get_stock_levels') {
         const { warehouse, item_code } = args as {
           warehouse?: string;
           item_code?: string;
@@ -2243,7 +2243,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'inventory.get_stock_levels',
+                tool: 'inventory_get_stock_levels',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2257,7 +2257,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'inventory.get_low_stock_items') {
+      } else if (name === 'inventory_get_low_stock_items') {
         const { warehouse, threshold_days } = args as {
           warehouse?: string;
           threshold_days?: number;
@@ -2276,7 +2276,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'inventory.get_low_stock_items',
+                tool: 'inventory_get_low_stock_items',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2290,7 +2290,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'finance.create_sales_invoice') {
+      } else if (name === 'finance_create_sales_invoice') {
         const { customer, due_date, company, items } = args as {
           customer: string;
           due_date: string;
@@ -2313,7 +2313,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'finance.create_sales_invoice',
+                tool: 'finance_create_sales_invoice',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2327,7 +2327,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'finance.record_payment') {
+      } else if (name === 'finance_record_payment') {
         const { payment_type, party_type, party, paid_amount, received_amount, references } = args as {
           payment_type: 'Receive' | 'Pay';
           party_type: 'Customer' | 'Supplier';
@@ -2353,7 +2353,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'finance.record_payment',
+                tool: 'finance_record_payment',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2367,7 +2367,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'finance.get_outstanding_invoices') {
+      } else if (name === 'finance_get_outstanding_invoices') {
         const { customer, company } = args as {
           customer?: string;
           company?: string;
@@ -2386,7 +2386,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'finance.get_outstanding_invoices',
+                tool: 'finance_get_outstanding_invoices',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
@@ -2400,7 +2400,7 @@ export async function registerAllTools(server: Server): Promise<void> {
 
         return response;
 
-      } else if (name === 'finance.create_expense_claim') {
+      } else if (name === 'finance_create_expense_claim') {
         const { employee, expense_approver, expenses } = args as {
           employee: string;
           expense_approver: string;
@@ -2421,7 +2421,7 @@ export async function registerAllTools(server: Server): Promise<void> {
               type: 'text' as const,
               text: JSON.stringify({
                 requestId: request.params.name,
-                tool: 'finance.create_expense_claim',
+                tool: 'finance_create_expense_claim',
                 ok: result.ok,
                 data: result.data,
                 error: result.error,
